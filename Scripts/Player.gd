@@ -201,8 +201,8 @@ func collision_in_direction(ray_cast, direction, print_something):
 	var new_position
 	var new_cast_to
 	
-	var position_pixel = 9
-	var cast_to_pixels = 5
+	var position_pixel = 1
+	var cast_to_pixels = 1
 	
 	if direction == DIRECTION.LEFT:
 		new_position = Vector2(-position_pixel, 0)
@@ -221,7 +221,7 @@ func collision_in_direction(ray_cast, direction, print_something):
 		frenk_print("ray_cast.position: " + str(ray_cast.position))
 
 	ray_cast.position = new_position
-	ray_cast.cast_to = ray_cast.position + new_cast_to
+	ray_cast.cast_to = new_cast_to
 	ray_cast.force_raycast_update()
 	
 	if print_something:
